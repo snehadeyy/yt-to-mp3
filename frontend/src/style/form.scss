@@ -1,0 +1,99 @@
+main {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #0d1428;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+
+    .form-container {
+        // min-width: 350px;
+        max-width: 500px;
+        // margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .input-group {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+
+        input {
+            border: none;
+            outline: transparent;
+            padding-inline: 0.5rem;
+            padding-block: 0.7rem;
+            border-radius: 0.3rem;
+        }
+    }
+
+    .button {
+        width: fit-content;
+        align-self: center;
+        border: none;
+        outline: none;
+        border-radius: 0.5rem;
+        padding-inline: 4rem;
+        padding-block: 0.7rem;
+        font-size: 16px;
+        cursor: pointer;
+        transition: all 0.2s linear;
+
+        &.primary-button {
+            background-color: #1071a2;
+            color: #fff;
+        }
+
+        &:active {
+            transform: scale(0.9);
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        }
+    }
+
+    .song-card-container {
+        // min-width: 300px;
+        margin-top: 1rem;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        .song-card-inside {
+            padding: 0;
+            border: 2px solid #464952;
+            border-radius: 1rem;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 0.5rem;
+            overflow: hidden;
+            transition: all 0.3s ease;
+
+            &:hover {
+                transform: translateY(-5px) scale(1);   // ✅ lift + slight zoom
+                box-shadow:
+                    0 10px 25px rgba(0, 0, 0, 0.4),
+                    0 0 15px rgba(16, 113, 162, 0.5);
+            }
+
+            h3 {
+                padding: 1rem;
+            }
+        }
+
+        img {
+            width: 200px;
+            height: auto;
+            object-fit: cover;
+        }
+    }
+}

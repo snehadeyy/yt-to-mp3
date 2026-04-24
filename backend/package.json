@@ -1,0 +1,17 @@
+{
+  "name": "yt-to-mp3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "npx nodemon server.js"
+  },
+  "author": "Sneha Dey",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "express": "^5.2.1",
+    "ytdlp-nodejs": "^3.4.4"
+  }
+}
