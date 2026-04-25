@@ -12,7 +12,7 @@ app.use(cors({
 }))
 
 
-import { router } from "./Routes/download.routes.js"
+import { router } from "./routes/download.routes.js"
 
 app.use("/api/v1", router)
 
