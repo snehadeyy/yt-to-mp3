@@ -2,9 +2,11 @@ import { useState } from "react"
 import axios from "axios"
 import "./style/form.scss"
 
+const API = import.meta.env.VITE_API_URL
+
 function App() {
   const api = axios.create({
-    baseURL: "http://localhost:3000/api/v1"
+    baseURL: API
   })
 
   const [url, setUrl] = useState("")
