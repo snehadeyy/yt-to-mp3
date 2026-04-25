@@ -22,7 +22,7 @@ function App() {
     setLoading(true)
 
     try {
-      const response = await api.get("/info", {
+      const response = await api.get("/api/v1/info", {
         params: { url }
       })
       // console.log(response)
@@ -40,7 +40,7 @@ function App() {
   const handleDownload = async () => {
     try {
       setLoading(true)
-      const response = await api.post("/download",
+      const response = await api.post("/api/v1/download",
         { url },
         {
           responseType: "blob"
