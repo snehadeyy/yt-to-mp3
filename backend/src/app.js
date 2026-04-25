@@ -4,11 +4,22 @@ import cors from "cors"
 const app = express()
 
 app.use(express.json())
-app.use(express.urlencoded({extended: true}))
+app.use(express.urlencoded({ extended: true }))
 
+const allowewdOrigins = [
+    "http://localhost:5173",
+    "https://yt-to-mp3-frontend.onrender.com"
+]
 
 app.use(cors({
-    origin: "http://localhost:5173"
+    origin: function (origin, cb) {
+        if (!origin || allowewdOrigins.includes(origin)) {
+            cb(null, true)
+        }
+        else {
+            cb(new Error("CORS blocked"))
+        }
+    }
 }))
 
 
